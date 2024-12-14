@@ -1,0 +1,102 @@
+.AboutPage {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    width: 80%;
+    margin-left: 14%;
+  }
+  
+  .AboutPage-header {
+    text-align: center;
+    padding: 50px 20px;
+    color: #ddd;
+  }
+  
+  .AboutPage-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .AboutPage-header p {
+    font-size: 1.2rem;
+  }
+  
+  #table-of-contents {
+    position: fixed;
+    top: 20px;
+    margin-left: -14%;
+    width: 200px;
+    background-color: #35343480;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #table-of-contents h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  #table-of-contents ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #table-of-contents li {
+    margin: 5px 0;
+    list-style-type: none
+  }
+  
+  #table-of-contents a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  #table-of-contents a:hover {
+    background-color: #ddd;
+  }
+  
+  #table-of-contents a.active {
+    background-color: #ccc;
+    font-weight: bold;
+  }
+  
+  .section {
+    margin: 40px 0;
+    padding: 20px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .section h2 {
+    font-size: 2rem;
+  }
+  
+  .section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .AboutPage-footer {
+    text-align: center;
+    
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  .AboutPage-footer p {
+    color: #333;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #table-of-contents {
+      position: static;
+      width: 100%;
+      padding: 10px 20px;
+      margin: 20px 0;
+    }
+    .section-text, img {
+      width: 100%;
+    }
+  }
+  
