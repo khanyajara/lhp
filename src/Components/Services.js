@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
-// import './ServicesPage.css';
+ import '../Styles/ServicesPage.css';
 
 function ServicesPage() {
   return (

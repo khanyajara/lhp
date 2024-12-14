@@ -4,6 +4,7 @@ import '../Styles/AboutPage.css';
 
 function AboutPage() {
   const [activeSection, setActiveSection] = useState('');
+  const [hoveredLink, setHoveredLink] = useState('');
 
   const handleScroll = () => {
     const sections = document.querySelectorAll('.section');
@@ -16,6 +17,18 @@ function AboutPage() {
       }
     });
     setActiveSection(currentSection);
+  };
+
+  const handleNavigation = (id) => {
+    const section = document.getElementById(id);
+    section.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleHover = (id) => {
+    setHoveredLink(id);
+    setTimeout(() => {
+      setHoveredLink('');
+    }, 5000); 
   };
 
   React.useEffect(() => {
@@ -38,64 +51,88 @@ function AboutPage() {
         <ul>
           <li>
             <a
-              href="#who-we-are"
-              className={activeSection === 'who-we-are' ? 'active' : ''}
+              onClick={() => handleNavigation('who-we-are')}
+              onMouseEnter={() => handleHover('who-we-are')}
+              className={`${
+                activeSection === 'who-we-are' ? 'active' : ''
+              } ${hoveredLink === 'who-we-are' ? 'hovered' : ''}`}
             >
               Who We Are
             </a>
           </li>
           <li>
             <a
-              href="#why-work-with-us"
-              className={activeSection === 'why-work-with-us' ? 'active' : ''}
+              onClick={() => handleNavigation('why-work-with-us')}
+              onMouseEnter={() => handleHover('why-work-with-us')}
+              className={`${
+                activeSection === 'why-work-with-us' ? 'active' : ''
+              } ${hoveredLink === 'why-work-with-us' ? 'hovered' : ''}`}
             >
               Why Work With Us
             </a>
           </li>
           <li>
             <a
-              href="#industry-focus"
-              className={activeSection === 'industry-focus' ? 'active' : ''}
+              onClick={() => handleNavigation('industry-focus')}
+              onMouseEnter={() => handleHover('industry-focus')}
+              className={`${
+                activeSection === 'industry-focus' ? 'active' : ''
+              } ${hoveredLink === 'industry-focus' ? 'hovered' : ''}`}
             >
               Industry Focus
             </a>
           </li>
           <li>
             <a
-              href="#capabilities"
-              className={activeSection === 'capabilities' ? 'active' : ''}
+              onClick={() => handleNavigation('capabilities')}
+              onMouseEnter={() => handleHover('capabilities')}
+              className={`${
+                activeSection === 'capabilities' ? 'active' : ''
+              } ${hoveredLink === 'capabilities' ? 'hovered' : ''}`}
             >
               Our Capabilities
             </a>
           </li>
           <li>
             <a
-              href="#our-people"
-              className={activeSection === 'our-people' ? 'active' : ''}
+              onClick={() => handleNavigation('our-people')}
+              onMouseEnter={() => handleHover('our-people')}
+              className={`${
+                activeSection === 'our-people' ? 'active' : ''
+              } ${hoveredLink === 'our-people' ? 'hovered' : ''}`}
             >
               Our People
             </a>
           </li>
           <li>
             <a
-              href="#case-studies"
-              className={activeSection === 'case-studies' ? 'active' : ''}
+              onClick={() => handleNavigation('case-studies')}
+              onMouseEnter={() => handleHover('case-studies')}
+              className={`${
+                activeSection === 'case-studies' ? 'active' : ''
+              } ${hoveredLink === 'case-studies' ? 'hovered' : ''}`}
             >
               Case Studies
             </a>
           </li>
           <li>
             <a
-              href="#value-proposition"
-              className={activeSection === 'value-proposition' ? 'active' : ''}
+              onClick={() => handleNavigation('value-proposition')}
+              onMouseEnter={() => handleHover('value-proposition')}
+              className={`${
+                activeSection === 'value-proposition' ? 'active' : ''
+              } ${hoveredLink === 'value-proposition' ? 'hovered' : ''}`}
             >
               Value Proposition
             </a>
           </li>
           <li>
             <a
-              href="#contact"
-              className={activeSection === 'contact' ? 'active' : ''}
+              onClick={() => handleNavigation('contact')}
+              onMouseEnter={() => handleHover('contact')}
+              className={`${
+                activeSection === 'contact' ? 'active' : ''
+              } ${hoveredLink === 'contact' ? 'hovered' : ''}`}
             >
               Get In Touch
             </a>
@@ -103,71 +140,70 @@ function AboutPage() {
         </ul>
       </section>
 
-      <section id="who-we-are" className="section">
-        <div className="section-text">
-          <h2>Who We Are</h2>
-          <p>LHP Detergents is a leading provider of cleaning products, services, and landscaping solutions. We offer affordable, tailor-made cleaning solutions to our clientele.</p>
+      <div className='columns'>
+        <div className='column-1'>
+          <section id="who-we-are" className="section">
+            <div className="section-text">
+              <h2>Who We Are</h2>
+              <p>LHP Detergents is a leading provider of cleaning products, services, and landscaping solutions. We offer affordable, tailor-made cleaning solutions to our clientele.</p>
+            </div>
+          </section>
+          <section id="why-work-with-us" className="section">
+            <div className="section-text">
+              <h2>Why Work With Us</h2>
+              <ul>
+                <li>Customer Delight</li>
+                <li>Quality Service</li>
+                <li>Flexibility</li>
+                <li>Health and Safety</li>
+                <li>Eco-friendly Approach</li>
+                <li>State of the Art Technology</li>
+              </ul>
+            </div>
+          </section>
+          <section id="industry-focus" className="section">
+            <div className="section-text">
+              <h2>Industry Focus</h2>
+              <p>We have expertise in multiple sectors such as office spaces, education, hospitality, retail, and industrial cleaning services.</p>
+              <ul>
+                <li>Office Spaces</li>
+                <li>Education Sector</li>
+                <li>Hospitality & Leisure Sector</li>
+                <li>Retail Sector</li>
+                <li>Financial Sector</li>
+                <li>Industrial, Manufacturing & Distribution</li>
+              </ul>
+            </div>
+          </section>
+          <section id="capabilities" className="section">
+            <div className="section-text">
+              <h2>Our Capabilities</h2>
+              <p>We specialize in high-quality cleaning and landscaping, utilizing state-of-the-art technology and eco-friendly products.</p>
+            </div>
+          </section>
         </div>
-      </section>
-
-      <section id="why-work-with-us" className="section">
-        <div className="section-text">
-          <h2>Why Work With Us</h2>
-          <ul>
-            <li>Customer Delight</li>
-            <li>Quality Service</li>
-            <li>Flexibility</li>
-            <li>Health and Safety</li>
-            <li>Eco-friendly Approach</li>
-            <li>State of the Art Technology</li>
-          </ul>
+        <div className='column-2'>
+          <section id="our-people" className="section">
+            <h2>Our People</h2>
+            <p>Our staff are specially trained in various cleaning disciplines and work with the highest standards of health and safety.</p>
+          </section>
+          <section id="case-studies" className="section">
+            <h2>Case Studies</h2>
+            <p>We have successfully partnered with organizations like NEF, COGHSTA, and the National Defense Force, delivering customized cleaning solutions.</p>
+          </section>
+          <section id="value-proposition" className="section">
+            <h2>Value Proposition</h2>
+            <p>At LHP Detergents, we always put our customers first, delivering top-quality cleaning services through dedication, trust, and professionalism.</p>
+          </section>
+          <section id="contact" className="section">
+            <h2>Get In Touch</h2>
+            <p>Talk to us or visit us:</p>
+            <p><strong>Location:</strong> The Northern Cape, South Africa</p>
+            <p><strong>Phone:</strong> +27 74 4474 313</p>
+            <p><strong>Email:</strong> lhpdetergents@gmail.com</p>
+          </section>
         </div>
-      </section>
-
-      <section id="industry-focus" className="section">
-        <div className="section-text">
-          <h2>Industry Focus</h2>
-          <p>We have expertise in multiple sectors such as office spaces, education, hospitality, retail, and industrial cleaning services.</p>
-          <ul>
-            <li>Office Spaces</li>
-            <li>Education Sector</li>
-            <li>Hospitality & Leisure Sector</li>
-            <li>Retail Sector</li>
-            <li>Financial Sector</li>
-            <li>Industrial, Manufacturing & Distribution</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="capabilities" className="section">
-        <div className="section-text">
-          <h2>Our Capabilities</h2>
-          <p>We specialize in high-quality cleaning and landscaping, utilizing state-of-the-art technology and eco-friendly products.</p>
-        </div>
-      </section>
-
-      <section id="our-people" className="section">
-        <h2>Our People</h2>
-        <p>Our staff are specially trained in various cleaning disciplines and work with the highest standards of health and safety.</p>
-      </section>
-
-      <section id="case-studies" className="section">
-        <h2>Case Studies</h2>
-        <p>We have successfully partnered with organizations like NEF, COGHSTA, and the National Defense Force, delivering customized cleaning solutions.</p>
-      </section>
-
-      <section id="value-proposition" className="section">
-        <h2>Value Proposition</h2>
-        <p>At LHP Detergents, we always put our customers first, delivering top-quality cleaning services through dedication, trust, and professionalism.</p>
-      </section>
-
-      <section id="contact" className="section">
-        <h2>Get In Touch</h2>
-        <p>Talk to us or visit us:</p>
-        <p><strong>Location:</strong> The Northern Cape, South Africa</p>
-        <p><strong>Phone:</strong> +27 74 4474 313</p>
-        <p><strong>Email:</strong> lhpdetergents@gmail.com</p>
-      </section>
+      </div>
 
       <footer className="AboutPage-footer">
         &copy; 2024 LHP Detergents Cleaning Services. All rights reserved.

@@ -1,0 +1,54 @@
+.ProjectsPage {
+    font-family: Arial, sans-serif;
+    
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .ProjectsPage-header {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .ProjectsPage-header h1 {
+    font-size: 2.5rem;
+    color: #40ca1d;
+  }
+  
+  .projects-list {
+    margin-top: 30px;
+  }
+  
+  .projects-list h2 {
+    font-size: 2rem;
+    color: #66b353;
+    margin-bottom: 20px;
+  }
+  
+  .projects-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .projects-list li {
+    font-size: 1.1rem;
+    color: #40ca1d;
+    margin: 10px 0;
+  }
+  
+  .projects-list li:hover {
+    color: #13b313; 
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .ProjectsPage-header h1 {
+      font-size: 2rem;
+    }
+    .projects-list h2 {
+      font-size: 1.5rem;
+    }
+  }
+  

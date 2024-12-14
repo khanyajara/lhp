@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
-// import './ProjectsPage.css';
+// import Slider from './slider';  
+ import '../Styles/Projects.css';
 
 function ProjectsPage() {
   return (
@@ -9,6 +10,10 @@ function ProjectsPage() {
       <header className="ProjectsPage-header">
         <h1>Our Projects</h1>
       </header>
+
+      
+      {/* <Slider /> */}
+
       <section className="projects-list">
         <h2>Featured Projects</h2>
         <ul>
