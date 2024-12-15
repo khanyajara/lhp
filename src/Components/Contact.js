@@ -1,64 +1,27 @@
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import React from 'react';
 import Navbar from './Navbar';
-// import './ContactPage.css';
+ import '../Styles/ContactPage.css';
 
 function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-   
-    emailjs
-      .sendForm('your_service_id', 'your_template_id', e.target, 'your_user_id')
-      .then(
-        (result) => {
-          console.log('Message sent: ', result.text);
-          alert('Message Sent!');
-          setFormData({
-            name: '',
-            email: '',
-            message: '',
-          });
-        },
-        (error) => {
-          console.log('Error: ', error.text);
-          alert('Failed to send message. Please try again later.');
-        }
-      );
-  };
-
   return (
     <div className="ContactPage">
-      <Navbar/>
+      <Navbar />
       <header className="ContactPage-header">
         <h1>Contact Us</h1>
       </header>
       <section className="contact-info">
         <h2>Get in Touch</h2>
         <p>Have a question or need more information? We’d love to hear from you. Use the form below to send us a message!</p>
-        <form onSubmit={handleSubmit}>
+        <form
+          action="https://formspree.io/f/xyzyqgza"
+          method="POST"
+        >
           <div className="form-group">
             <label htmlFor="name">Your Name</label>
             <input
               type="text"
               id="name"
               name="name"
-              value={formData.name}
-              onChange={handleChange}
               placeholder="Enter your name"
               required
             />
@@ -69,8 +32,6 @@ function ContactPage() {
               type="email"
               id="email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
               placeholder="Enter your email"
               required
             />
@@ -80,8 +41,6 @@ function ContactPage() {
             <textarea
               id="message"
               name="message"
-              value={formData.message}
-              onChange={handleChange}
               placeholder="Enter your message"
               required
             ></textarea>
