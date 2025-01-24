@@ -28,7 +28,7 @@ function AboutPage() {
     setHoveredLink(id);
     setTimeout(() => {
       setHoveredLink('');
-    }, 5000); 
+    }, 5000);
   };
 
   React.useEffect(() => {
@@ -39,175 +39,176 @@ function AboutPage() {
   return (
     <div className="AboutPage">
       <Navbar />
-      <header className="AboutPage-header">
-        <h1>Welcome to LHP Detergents Cleaning Services Limited</h1>
-        <p>
-          We have built an enviable reputation for Quality and Efficient Cleaning Products, Cleaning, and Landscaping Solutions in the region.
-        </p>
-      </header>
-
-      <section id="table-of-contents">
-        <h2>Table of Contents</h2>
-        <ul>
-          <li>
-            <a
-              onClick={() => handleNavigation('who-we-are')}
-              onMouseEnter={() => handleHover('who-we-are')}
-              className={`${
-                activeSection === 'who-we-are' ? 'active' : ''
-              } ${hoveredLink === 'who-we-are' ? 'hovered' : ''}`}
-            >
-              Who We Are
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => handleNavigation('why-work-with-us')}
-              onMouseEnter={() => handleHover('why-work-with-us')}
-              className={`${
-                activeSection === 'why-work-with-us' ? 'active' : ''
-              } ${hoveredLink === 'why-work-with-us' ? 'hovered' : ''}`}
-            >
-              Why Work With Us
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => handleNavigation('industry-focus')}
-              onMouseEnter={() => handleHover('industry-focus')}
-              className={`${
-                activeSection === 'industry-focus' ? 'active' : ''
-              } ${hoveredLink === 'industry-focus' ? 'hovered' : ''}`}
-            >
-              Industry Focus
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => handleNavigation('capabilities')}
-              onMouseEnter={() => handleHover('capabilities')}
-              className={`${
-                activeSection === 'capabilities' ? 'active' : ''
-              } ${hoveredLink === 'capabilities' ? 'hovered' : ''}`}
-            >
-              Our Capabilities
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => handleNavigation('our-people')}
-              onMouseEnter={() => handleHover('our-people')}
-              className={`${
-                activeSection === 'our-people' ? 'active' : ''
-              } ${hoveredLink === 'our-people' ? 'hovered' : ''}`}
-            >
-              Our People
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => handleNavigation('case-studies')}
-              onMouseEnter={() => handleHover('case-studies')}
-              className={`${
-                activeSection === 'case-studies' ? 'active' : ''
-              } ${hoveredLink === 'case-studies' ? 'hovered' : ''}`}
-            >
-              Case Studies
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => handleNavigation('value-proposition')}
-              onMouseEnter={() => handleHover('value-proposition')}
-              className={`${
-                activeSection === 'value-proposition' ? 'active' : ''
-              } ${hoveredLink === 'value-proposition' ? 'hovered' : ''}`}
-            >
-              Value Proposition
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={() => handleNavigation('contact')}
-              onMouseEnter={() => handleHover('contact')}
-              className={`${
-                activeSection === 'contact' ? 'active' : ''
-              } ${hoveredLink === 'contact' ? 'hovered' : ''}`}
-            >
-              Get In Touch
-            </a>
-          </li>
-        </ul>
-      </section>
-
-      <div className='columns'>
-        <div className='column-1'>
-          <section id="who-we-are" className="section">
-            <div className="section-text">
-              <h2>Who We Are</h2>
-              <p>LHP Detergents is a leading provider of cleaning products, services, and landscaping solutions. We offer affordable, tailor-made cleaning solutions to our clientele.</p>
-            </div>
-          </section>
-          <section id="why-work-with-us" className="section">
-            <div className="section-text">
-              <h2>Why Work With Us</h2>
-              <ul>
-                <li>Customer Delight</li>
-                <li>Quality Service</li>
-                <li>Flexibility</li>
-                <li>Health and Safety</li>
-                <li>Eco-friendly Approach</li>
-                <li>State of the Art Technology</li>
-              </ul>
-            </div>
-          </section>
-          <section id="industry-focus" className="section">
-            <div className="section-text">
-              <h2>Industry Focus</h2>
-              <p>We have expertise in multiple sectors such as office spaces, education, hospitality, retail, and industrial cleaning services.</p>
-              <ul>
-                <li>Office Spaces</li>
-                <li>Education Sector</li>
-                <li>Hospitality & Leisure Sector</li>
-                <li>Retail Sector</li>
-                <li>Financial Sector</li>
-                <li>Industrial, Manufacturing & Distribution</li>
-              </ul>
-            </div>
-          </section>
-          <section id="capabilities" className="section">
-            <div className="section-text">
-              <h2>Our Capabilities</h2>
-              <p>We specialize in high-quality cleaning and landscaping, utilizing state-of-the-art technology and eco-friendly products.</p>
-            </div>
-          </section>
+      <div className="container1 my-5">
+        
+        <div className="card mb-4" style={{ backgroundColor: 'transparent', color: '#fff' }}>
+          <div className="card-body text-center">
+            <h1 className="card-title">Welcome to LHP Detergents Cleaning Services Limited</h1>
+            <p className="card-text1">
+            Welcome to LHP Detergents, your trusted partner for a cleaner,
+            greener, and healthier living space. We specialize in the manufacturing
+            of high-quality cleaning detergents, offering expert cleaning services,
+            and providing reliable gardening services supply and delivery. At LHP 
+            Detergents, we are committed to delivering exceptional products and 
+            services that exceed our customers' expectations. Our mission is to
+            make a positive impact on our community by promoting cleanliness,
+            sustainability, and environmental stewardship.
+            Learn more about our products and services,
+            and discover how we can help you achieve a cleaner,
+            healthier, and happier living space
+            </p>
+          </div>
         </div>
-        <div className='column-2'>
-          <section id="our-people" className="section">
-            <h2>Our People</h2>
-            <p>Our staff are specially trained in various cleaning disciplines and work with the highest standards of health and safety.</p>
-          </section>
-          <section id="case-studies" className="section">
-            <h2>Case Studies</h2>
-            <p>We have successfully partnered with organizations like NEF, COGHSTA, and the National Defense Force, delivering customized cleaning solutions.</p>
-          </section>
-          <section id="value-proposition" className="section">
-            <h2>Value Proposition</h2>
-            <p>At LHP Detergents, we always put our customers first, delivering top-quality cleaning services through dedication, trust, and professionalism.</p>
-          </section>
-          <section id="contact" className="section">
-            <h2>Get In Touch</h2>
-            <p>Talk to us or visit us:</p>
-            <p><strong>Location:</strong> The Northern Cape, South Africa</p>
-            <p><strong>Phone:</strong> +27 74 4474 313</p>
-            <p><strong>Email:</strong> lhpdetergents@gmail.com</p>
-          </section>
+
+        {/* Table of Contents Section in Card */}
+        <div className="card mb-4" style={{ backgroundColor: 'transparent', color: '#fff' }}>
+          <div className="card-body">
+            <h2 className="card-title">Table of Contents</h2>
+            <ul className="list-group">
+              {[
+                'who-we-are',
+                'why-work-with-us',
+                'industry-focus',
+                'capabilities',
+                'our-people',
+                'case-studies',
+                'value-proposition',
+                'contact',
+              ].map((id) => (
+                <li
+                  key={id}
+                  className={`list-group-item ${
+                    activeSection === id ? 'active bg-primary text-white' : ''
+                  }`}
+                  onClick={() => handleNavigation(id)}
+                  onMouseEnter={() => handleHover(id)}
+                  style={{
+                    background: 'inherit',
+                    color: activeSection === id ? '#fff' : '#000',
+                  }}
+                >
+                  <a
+                    href={`#${id}`}
+                    className={`text-decoration-none ${
+                      hoveredLink === id ? 'fw-bold text-light' : ''
+                    }`}
+                  >
+                    {id.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase())}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
+
+        {/* Main Content Sections in Cards */}
+        <div className="row">
+          {/* Left Column */}
+          <div className="col-md-6">
+            <div className="card mb-4" id="who-we-are" style={{ backgroundColor: 'transparent', color: '#fff' }}>
+              <div className="card-body">
+                <h2 className="card-title">Who We Are</h2>
+                <p className="card-text1">
+                  LHP Detergents is a leading provider of cleaning products, services, and landscaping solutions. We offer
+                  affordable, tailor-made cleaning solutions to our clientele.
+                </p>
+              </div>
+            </div>
+
+            <div className="card mb-4" id="why-work-with-us" style={{ backgroundColor: 'transparent', color: '#fff' }}>
+              <div className="card-body">
+                <h2 className="card-title">Why Work With Us</h2>
+                <ul className="card-text1">
+                  <li>Customer Delight</li>
+                  <li>Quality Service</li>
+                  <li>Flexibility</li>
+                  <li>Health and Safety</li>
+                  <li>Eco-friendly Approach</li>
+                  <li>State of the Art Technology</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="card mb-4" id="industry-focus" style={{ backgroundColor: 'transparent', color: '#fff' }}>
+              <div className="card-body">
+                <h2 className="card-title">Industry Focus</h2>
+                <ul className="card-text1">
+                  <li>Office Spaces</li>
+                  <li>Education Sector</li>
+                  <li>Hospitality & Leisure Sector</li>
+                  <li>Retail Sector</li>
+                  <li>Financial Sector</li>
+                  <li>Industrial, Manufacturing & Distribution</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="card mb-4" id="capabilities" style={{ backgroundColor: 'transparent', color: '#fff' }}>
+              <div className="card-body">
+                <h2 className="card-title">Our Capabilities</h2>
+                <p className="card-text1">
+                  We specialize in high-quality cleaning and landscaping, utilizing state-of-the-art technology and
+                  eco-friendly products.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          
+          <div className="col-md-6">
+            <div className="card mb-4" id="our-people" style={{ backgroundColor: 'transparent', color: '#fff' }}>
+              <div className="card-body">
+                <h2 className="card-title">Our People</h2>
+                <p className="card-text1">
+                  Our staff are specially trained in various cleaning disciplines and work with the highest standards of
+                  health and safety.
+                </p>
+              </div>
+            </div>
+
+            <div className="card mb-4" id="case-studies" style={{ backgroundColor: 'transparent', color: '#fff' }}>
+              <div className="card-body">
+                <h2 className="card-title">Case Studies</h2>
+                <p className="card-text1">
+                  We have successfully partnered with organizations like NEF, COGHSTA, and the National Defense Force,
+                  delivering customized cleaning solutions.
+                </p>
+              </div>
+            </div>
+
+            <div className="card mb-4" id="value-proposition" style={{ backgroundColor: 'transparent', color: '#fff' }}>
+              <div className="card-body">
+                <h2 className="card-title">Value Proposition</h2>
+                <p className="card-text1">
+                  At LHP Detergents, we always put our customers first, delivering top-quality cleaning services through
+                  dedication, trust, and professionalism.
+                </p>
+              </div>
+            </div>
+
+            <div className="card mb-4" id="contact" style={{ backgroundColor: 'transparent', color: '#fff' }}>
+              <div className="card-body">
+                <h2 className="card-title">Get In Touch</h2>
+                <p className="card-text1">
+                  <strong>Location:</strong> The Northern Cape, South Africa
+                </p>
+                <p className="card-text1">
+                  <strong>Phone:</strong> +27 74 4474 313
+                </p>
+                <p className="card-text1">
+                  <strong>Email:</strong> lhpdetergents@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
       </div>
-
-      <footer className="AboutPage-footer">
-        &copy; 2024 LHP Detergents Cleaning Services. All rights reserved.
-      </footer>
+      <footer className="HomePage-footer">
+          &copy; 2024 LHP Detergents Cleaning Services. All rights reserved.
+        </footer>
     </div>
   );
 }

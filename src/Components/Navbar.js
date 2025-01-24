@@ -1,20 +1,63 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../Styles/Navbar.css"; 
 
-function Navbar () {
-    return(
-        <header className="HomePage-header">
-        <div > <img className='logo' src="/logo-removebg-preview.png" alt="LHP Detergents" /></div>
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="/contact">Contact Us</Link></li>
+function Navbar() {
+  return (
+    <nav className="navbar navbar-expand-lg navbar-dark custom-navbar">
+      <div className="container">
+        <Link className="navbar-brand" to="/">
+          <img
+            src="/logo-removebg-preview.png"
+            alt="LHP Detergents"
+            style={{ width: "50px" }}
+          />
+          LHP Detergents
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">
+                About Us
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/services">
+                Services
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/projects">
+                Projects
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">
+                Contact Us
+              </Link>
+            </li>
           </ul>
-        </nav>
-      </header>
-    )
+        </div>
+      </div>
+    </nav>
+  );
 }
-export default Navbar
+
+export default Navbar;

@@ -5,6 +5,10 @@ import AboutPage from './Components/About';
 import ContactPage from './Components/Contact';
 import ServicesPage from './Components/Services';
 import ProjectsPage from './Components/Projects';
+import css from './App.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+
 
 
 function App() {

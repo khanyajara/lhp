@@ -1,0 +1,31 @@
+.custom-navbar {
+    margin-top: 16px; 
+    height: calc(56px + 16px); 
+    width: 85%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    border-radius: 25px; 
+    opacity: 0.9; 
+    background: linear-gradient(90deg, #1F2937, #3AB795);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    color: white;
+    position: static;
+  }
+  
+  .navbar-brand img {
+    height: 40px; 
+  }
+  
+  .nav-link {
+    font-size: 1rem; 
+  }
+  
+  .navbar-toggler {
+    outline: none;
+  }
+
+  .nav-link:hover{
+  color: aliceblue;
+  text-decoration: underline;
+  }
+  
