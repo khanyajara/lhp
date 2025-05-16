@@ -1,0 +1,69 @@
+.ServicesPage {
+  font-family: 'Poppins', sans-serif;
+ 
+  margin: 0 auto;
+  color: #333;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.ServicesPage-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ServicesPage-header h1 {
+  font-size: 2.8rem;
+  color: #2e7d32;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.services-list {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 30px 25px;
+}
+
+.services-list h2 {
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #2e7d32;
+  padding-bottom: 8px;
+  font-weight: 600;
+}
+
+.services-list ul {
+  list-style: inside disc;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  color: #444;
+  padding-left: 0;
+  margin: 0;
+}
+
+.services-list ul li {
+  margin-bottom: 14px;
+}
+
+@media (max-width: 768px) {
+  .ServicesPage {
+    padding: 20px 15px;
+  }
+
+  .ServicesPage-header h1 {
+    font-size: 2rem;
+  }
+
+  .services-list h2 {
+    font-size: 1.5rem;
+  }
+
+  .services-list ul li {
+    font-size: 1rem;
+  }
+}
